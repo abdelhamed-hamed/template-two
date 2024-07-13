@@ -1,0 +1,170 @@
+.pricing {
+    padding-top: var(--main-padding, 100px);
+    padding-bottom: var(--main-padding, 100px);
+}
+
+.pricing .pricing-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pricing .pricing-content>div {
+    border-top: 2px solid var(--main-color, black);
+}
+
+/* Start Using Media  */
+@media (max-width:575px) {
+    .pricing .pricing-content>div {
+        flex-basis: 100%;
+    }
+
+    .pricing .pricing-content>div:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width:576px) {
+    .pricing .pricing-content>div {
+        flex-basis: 40%;
+    }
+
+    .pricing-content {
+        gap: 10%;
+    }
+
+    .pricing .pricing-content>div:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width:992px) {
+    .pricing .pricing-content>div {
+        flex-basis: 29%;
+
+    }
+
+    .pricing-content {
+        gap: 4.3%;
+    }
+
+    .pricing .pricing-content>div:not(:last-child) {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width:1200px) {
+    .pricing .pricing-content>div {
+        flex-basis: 20%;
+    }
+
+    .pricing-content {
+        gap: 5%;
+    }
+}
+
+/* End Using Media  */
+/* Start Edit Basic And Prices */
+.pricing-content div .basic {
+    padding: 15px;
+}
+
+.pricing .pricing-content .basic p:first-child {
+    text-transform: capitalize;
+    font-size: 22px;
+    text-align: center;
+}
+
+.pricing .pricing-content .basic p:last-child {
+    text-align: center;
+
+    & .dollar {
+        position: relative;
+        top: -40px;
+        left: -13px;
+        font-weight: 400;
+        font-size: 32px;
+    }
+
+    & .number {
+        font-size: 68px !important;
+        font-weight: bolder !important;
+    }
+
+    & span {
+        text-transform: capitalize;
+        font-weight: 700;
+        font-size: 21px;
+        padding-left: 13px;
+    }
+}
+
+/* End Edit Basic And Prices */
+/* Start Feautres */
+.pricing-content .feautres {
+    border-block: 2px solid var(--main-color, black);
+}
+
+.pricing-content .feautres>div {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid var(--main-color, black);
+    text-transform: capitalize;
+    font-weight: 400;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.pricing-content .feautres>div:last-child {
+    border-bottom: 0;
+}
+
+/* End Feautres */
+/* Start Buy Click */
+.pricing-content .buy {
+
+    & div {
+        width: fit-content;
+        margin: 50px auto;
+
+        & a {
+            text-decoration: none;
+            text-transform: capitalize;
+            border: 2px solid var(--main-color);
+            padding: 19px;
+            padding: 19px;
+            font-size: 18px;
+        }
+
+        & a:hover {
+            background-color: var(--main-color, blue);
+            color: white;
+            transition: var(--main-transition, 0.5s);
+        }
+    }
+
+
+}
+
+/* End Buy Click */
+
+.container .pricing-contact:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+
+    & span {
+        font-size: 22px;
+        text-align: center;
+
+    }
+
+    & a {
+        text-transform: capitalize;
+        color: white;
+        background-color: var(--main-color, #EEE);
+        text-decoration: none;
+        padding: 17px;
+        margin-top: 19px;
+    }
+}

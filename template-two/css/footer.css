@@ -1,0 +1,69 @@
+footer {
+    padding-top: var(--main-padding, 100px);
+    padding-bottom: var(--main-padding, 100px);
+    background-image: url('../images/subscribe.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    background-color: rgb(0 0 0 / 50%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+footer .container {
+    position: relative;
+}
+
+/* Start Footer Edit */
+.footer-content {
+    text-align: center;
+
+    /* Start P Edit */
+    & p:nth-of-type(1) {
+        color: white;
+        text-transform: uppercase;
+        border-bottom: 3px solid white;
+        width: fit-content;
+        margin: 37px auto 0;
+        padding: 20px;
+        font-size: 22px;
+    }
+
+    /* End P Edit */
+    /* Start Ul Edit */
+    & ul {
+        margin: revert;
+        display: flex;
+        color: white;
+        padding: 0;
+        justify-content: center;
+        gap: 30px;
+        margin: 25px 0 80px;
+
+        & li {
+            display: inline;
+        }
+
+        & .footer-icon {}
+    }
+
+    /* End Ul Edit */
+    /* Start P CopyRight Edit */
+    & p:nth-of-type(2) {
+        color: white;
+        text-transform: capitalize;
+
+        & span {
+            color: var(--main-color, red);
+        }
+    }
+
+    /* ENd P CopyRight Edit */
+}
+
+/* End Footer Edit */

@@ -1,0 +1,153 @@
+.skills {
+    padding-top: var(--main-padding, 100px);
+    padding-bottom: var(--main-padding, 100px);
+}
+
+.skills-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    text-align: center;
+}
+
+@media (max-width:991px) {
+    .skills-content>div {
+        flex-basis: 100%;
+    }
+}
+
+@media (min-width:992px) {
+    .skills-content>div {
+        flex-basis: 45%;
+    }
+}
+
+.skills-content div>h3 {
+    color: #777;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0 0 36px;
+}
+
+.skills-content div:not(.box-text)>p {
+    font-weight: 500;
+    font-size: 15px;
+    margin: 0 0 100px;
+}
+
+/* Start testimonials Styles */
+
+.skills .skills-content .testimonials .box {
+    & img {
+        width: 100px;
+        border-radius: 50%;
+    }
+
+    & .box-text P:nth-child(1) {
+        font-weight: normal;
+        font-size: 16px;
+    }
+
+    & .box-text p:nth-child(2) {
+        text-align: right;
+        border-bottom: 1px solid #777;
+        padding-bottom: 11px;
+        color: #777;
+    }
+}
+
+@media (min-width:768px) {
+    .skills .skills-content .testimonials .box {
+        display: flex;
+        align-items: center;
+        text-align: start;
+
+        & img {
+            margin-right: 28px;
+        }
+    }
+}
+
+@media (max-width:991px) {
+    .skills .skills-content .testimonials .box {
+        margin-bottom: 70px !important;
+    }
+}
+
+
+
+.skills .skills-content .testimonials .circle {
+
+    & ul {
+        display: block;
+        padding: 0;
+        margin: 19px auto;
+
+        & li {
+            width: 15px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            border: 2px solid #333;
+            display: inline-block;
+        }
+    }
+
+}
+
+@media (max-width:997px) {
+    .skills .skills-content .testimonials .circle {
+        margin: 29px 0 64px;
+    }
+}
+
+/* End testimonials Styles */
+
+/* Start Person Skills */
+.person-skills .box {
+    margin-bottom: 50px;
+}
+
+.person-skills .box>p {
+    margin: revert !important;
+    text-align: start !important;
+    text-transform: uppercase !important;
+}
+
+.person-skills .box>div {
+    width: 100%;
+    background-color: #dedadc;
+    height: 40px;
+
+    & div {
+        position: relative;
+        position: relative;
+        height: 100%;
+        background: var(--main-color);
+    }
+
+    & div::before {
+        content: attr(level-skill);
+        position: absolute;
+        width: 40px;
+        padding: 8px;
+        background: black;
+        color: white;
+        text-align: center;
+        left: calc(100% - 28px);
+        top: -54px;
+    }
+
+    & div::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-width: 14px;
+        border-color: black transparent transparent transparent;
+        border-style: solid;
+        top: -20px;
+        left: calc(100% - 14px);
+    }
+}
+
+/* End Person Skills */

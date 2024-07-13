@@ -1,0 +1,93 @@
+.supscribe {
+    padding-top: var(--main-padding, 100px);
+    padding-bottom: var(--main-padding, 100px);
+    background-image: url('../images/subscribe.jpg');
+    background-size: cover;
+    position: relative;
+}
+
+.supscribe::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 60%);
+    top: 0;
+}
+
+.supscribe .container {
+    position: relative;
+}
+
+.supscribe .subscribe-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+}
+
+@media (max-width:991px) {
+    .supscribe .subscribe-content {
+        flex-wrap: wrap;
+        row-gap: 30px;
+    }
+}
+
+/* Start Input Edit */
+
+.supscribe .subscribe-content .input-content {
+    position: relative;
+}
+
+@media (max-width:991px) {
+    .supscribe .subscribe-content .input-content {
+        width: fit-content;
+        margin: 0 auto;
+    }
+}
+
+.supscribe .container .subscribe-content .icon-email {
+    width: 20px;
+    position: absolute;
+    color: white;
+    top: 50%;
+    translate: 0 -50%;
+    font-size: 24px;
+    padding-left: 17px;
+}
+
+.supscribe .container .subscribe-content input[type='email'] {
+    border: 1px solid white;
+    padding: 15px;
+    background: transparent;
+    position: relative;
+}
+
+.supscribe .container .subscribe-content input[placeholder='your email'] {
+    text-transform: capitalize;
+    padding-left: 53px;
+}
+
+.supscribe .container .subscribe-content input[type='submit'] {
+    margin-left: -6px;
+    padding: 15px;
+    background-color: var(--main-color);
+    color: white;
+    text-transform: uppercase;
+}
+
+/* End Input Edit */
+.supscribe .subscribe-content>div {
+    width: 45%;
+}
+
+@media (max-width:991px) {
+    .supscribe .subscribe-content>div {
+        width: 100%;
+    }
+}
+
+.supscribe .subscribe-content div:nth-child(2) {
+    color: white;
+    line-height: 1.6;
+    text-transform: capitalize;
+}

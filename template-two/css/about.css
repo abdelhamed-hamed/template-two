@@ -1,0 +1,34 @@
+.about {
+    padding-top: var(--main-padding, 100px);
+    padding-bottom: var(--main-padding, 100px);
+}
+
+.about .address-style {
+    align-items: center;
+    text-align: center;
+
+    & h2::before,
+    & h2::after {
+        display: block !important;
+    }
+}
+
+.about .about-image {
+    overflow: hidden;
+
+    & img {
+        position: relative;
+        bottom: -138px;
+        left: 50%;
+        margin-top: -138px;
+        translate: -50% 0;
+    }
+}
+
+@media (max-width:768px) {
+    .about-image img {
+        bottom: -43px !important;
+        margin-top: -43px !important;
+        width: 242px;
+    }
+}
